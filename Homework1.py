@@ -373,7 +373,7 @@ fig = go.Figure(go.Bar(
     marker_line_width=1,
     text=top_values,
     textposition="outside",
-    textfont=dict(color="#5D3B52", size=12),
+    textfont=dict(color="#000000", size=12),
     hovertemplate="%{y}<br>Connected Companies (Degree): %{x}<extra></extra>",
 ))
 fig.update_layout(
@@ -381,7 +381,7 @@ fig.update_layout(
     margin=dict(l=0, r=50, t=8, b=0),
     paper_bgcolor="#FFF7FB",
     plot_bgcolor="#FFF7FB",
-    font_color="#5D3B52",
+    font_color="#000000",
     font_size=12,
     xaxis=dict(title="Degree (Connected Companies)", gridcolor="#F0E8EC", title_font_size=12),
     yaxis=dict(autorange="reversed", title=None),
