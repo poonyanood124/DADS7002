@@ -393,8 +393,8 @@ fig.update_layout(
     plot_bgcolor=bg,
     font_color=fg,
     font_size=12,
-    xaxis=dict(title="Degree (Connected Companies)", gridcolor=grid, title_font_size=12),
-    yaxis=dict(autorange="reversed", title=None),
+    xaxis=dict(title="Degree (Connected Companies)", gridcolor=grid, title_font=dict(size=12, color="#000000"), tickfont=dict(color="#000000")),
+    yaxis=dict(autorange="reversed", title=None, tickfont=dict(color="#000000")),
     bargap=0.25,
 )
 fig.update_traces(
