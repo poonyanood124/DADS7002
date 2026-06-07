@@ -225,8 +225,6 @@ transition:all 0.12s;line-height:1;padding:0}
 <body>
 <div class="wrap">
 <div class="ctrl">
-<button onclick="zi()" title="Zoom In">+</button>
-<button onclick="zo()" title="Zoom Out">−</button>
 <button onclick="rv()" title="Reset View">⟲</button>
 <button onclick="fn()" title="Fit Network">⊞</button>
 <div id="mynetwork"></div>
