@@ -364,6 +364,16 @@ top_10 = top_10[-10:]
 top_labels = [all_stakeholders[sid]["label"] for sid, _ in top_10]
 top_values = [deg for _, deg in top_10]
 
+is_dark = False
+try:
+    is_dark = st.get_option("theme.base") == "dark"
+except Exception:
+    pass
+
+bg = "#1E1E1E" if is_dark else "#FFF7FB"
+fg = "#E0E0E0" if is_dark else "#5D3B52"
+grid = "#444444" if is_dark else "#F0E8EC"
+
 fig = go.Figure(go.Bar(
     x=top_values,
     y=top_labels,
@@ -373,17 +383,17 @@ fig = go.Figure(go.Bar(
     marker_line_width=1,
     text=top_values,
     textposition="outside",
-    textfont=dict(color="#000000", size=12),
+    textfont=dict(color=fg, size=12),
     hovertemplate="%{y}<br>Connected Companies (Degree): %{x}<extra></extra>",
 ))
 fig.update_layout(
     height=400,
     margin=dict(l=0, r=50, t=8, b=0),
-    paper_bgcolor="#FFF7FB",
-    plot_bgcolor="#FFF7FB",
-    font_color="#000000",
+    paper_bgcolor=bg,
+    plot_bgcolor=bg,
+    font_color=fg,
     font_size=12,
-    xaxis=dict(title="Degree (Connected Companies)", gridcolor="#F0E8EC", title_font_size=12),
+    xaxis=dict(title="Degree (Connected Companies)", gridcolor=grid, title_font_size=12),
     yaxis=dict(autorange="reversed", title=None),
     bargap=0.25,
 )
