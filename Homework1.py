@@ -114,7 +114,7 @@ stakeholder_degree = defaultdict(int)
 for e in all_edges:
     stakeholder_degree[e["to"]] += 1
 
-st.header("Search Panel")
+st.header("Search")
 all_symbols = sorted(df["Symbol"].unique().tolist())
 
 all_stakeholder_names = sorted(set(
